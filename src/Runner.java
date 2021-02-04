@@ -1,11 +1,20 @@
 public class Runner {
 
     public static void main(String[] args) {
-        System.out.println("Welcome!!");
-        Persona persona = new Persona();
 
 
-        System.out.println("Listo tenemos Git");
+        Persona persona = new Persona("Carlos");
+
+
+
+        Persona otraPersona = new Persona();
+        otraPersona.setName("Paty");
+
+
+        System.out.println(persona.getName());
+        System.out.println(otraPersona.getName());
+
+
     }
 
 }
