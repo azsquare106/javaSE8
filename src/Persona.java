@@ -1,21 +1,56 @@
 public class Persona {
 
-    private String name;
+    private String nombrePersona;
+    private int edad;
+    private String genero;
+    private String apellido;
 
-    public Persona(String name) {
-        this.name = name;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setNombrePersona(String nombrePersona) {
+        this.nombrePersona = nombrePersona;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
 
-    Persona(){
+    public void mayoriaEdad(){
+
+        if(edad> 18){
+            System.out.println("La persona es mayor de edad");
+        }else{
+            System.out.println("La persona es menor de edad");
+        }
 
     }
 
-    public String getName() {
-        return name;
+
+    public String mayorOmenor(){
+
+           if(edad>18){
+               return "es mayor de edad";
+           }else{
+               return "no es mayor de edad";
+           }
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getNombrePersona() {
+        return nombrePersona;
+    }
+
+    public String getApellido() {
+        return apellido;
     }
 }
