@@ -1,9 +1,10 @@
 package com.dev.university;
 
-public class Materia {
+public class Lenguaje {
+
 
     private String nombre;
-    private Profesor maestro;
+    private String nivel;
 
     public String getNombre() {
         return nombre;
@@ -13,11 +14,11 @@ public class Materia {
         this.nombre = nombre;
     }
 
-    public Profesor getMaestro() {
-        return maestro;
+    public String getNivel() {
+        return nivel;
     }
 
-    public void setMaestro(Profesor maestro) {
-        this.maestro = maestro;
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
     }
 }

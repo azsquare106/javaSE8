@@ -5,49 +5,81 @@ import java.util.ArrayList;
 public class Runner {
     public static void main(String[] args) {
 
-        Materia m1 = new Materia();
-        m1.setNombre("Calculo");
-        Materia m2 = new Materia();
-        m2.setNombre("Redes");
-        Materia m3 = new Materia();
-        m3.setNombre("Telefonia");
+       Lenguaje o1 = new Lenguaje ();
+       o1.setNombre("Español");
 
-        ArrayList<Materia> materias = new ArrayList<>();
-        materias.add(m1);
-        materias.add(m2);
-        materias.add(m3);
+       Lenguaje o2 = new Lenguaje ();
+       o2.setNombre("Inglés");
 
-        Estudiante e1  = new Estudiante();
-        e1.setNombre("Carlos");
-        e1.setMatricula(123);
-        e1.setMaterias(materias);
+       Profesor p1 = new Profesor ();
+       p1.setNombre("Antonio");
+       p1.setIdioma(o1);
+
+       Profesor p2 = new Profesor ();
+       p2.setNombre("Miguel");
+       p2.setIdioma(o2);
+
+       Materia m1 = new Materia ();
+
+       m1.setNombre("Sistema de Antenas");
+       m1.setMaestro(p1);
+
+       Materia m2 = new Materia ();
+       m2.setNombre("Redes");
+       m2.setMaestro(p2);
+
+       Materia m3 = new Materia ();
+       m2.setNombre("Fibra Óptica");
+       m2.setMaestro(p2);
+
+       ArrayList<Materia> arrayM = new ArrayList<>();
+
+       arrayM.add(m1);
+       arrayM.add(m2);
+
+       Estudiante e1 = new Estudiante ();
+       e1.setNombre("Patricia");
+       e1.setMatricula(1234);
+       e1.setMaterias(arrayM);
+
+       ArrayList<Estudiante> arrayE = new ArrayList<>();
+
+       arrayE.add(e1);
+
+       Aula a1 = new Aula ();
+       a1.setNombre("Taller Redes");
+       a1.setIdentificador(405);
+
+       Aula a2 = new Aula ();
+       a2.setNombre("Cisco");
+       a2.setIdentificador(203);
+
+       ArrayList<Aula> arrayA = new ArrayList<>();
+       arrayA.add(a1);
+       arrayA.add(a2);
+
+       Universidad u1 = new Universidad ();
+
+       u1.setNombreUniversidad("UANL");
+       u1.setEstudiantes(arrayE);
+       u1.setAulas(arrayA);
+
+       // Imprimir el lenguaje de los maestros de la UANL
+
+        ArrayList<Estudiante> x = u1.getEstudiantes();
+        Estudiante y = x.get(0);
+        ArrayList<Materia> z = y.getMaterias();
+        Materia a = z.get(1);
+        Profesor b = a.getMaestro();
+        Lenguaje c = b.getIdioma();
+
+        System.out.println(c.getNombre());
+        System.out.println(b.getNombre());
 
 
 
-        Estudiante e2 = new Estudiante();
-        e2.setNombre("Patricia");
-        e2.setMatricula(567);
 
 
-
-        Universidad universidad = new Universidad();
-        universidad.setNombreUniversidad("UANL");
-
-        ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
-        estudiantes.add(e1);
-        estudiantes.add(e2);
-
-        universidad.setEstudiantes(estudiantes);
-        universidad.printEstudiantes();
-
-
-
-        ArrayList<Estudiante> x = universidad.getEstudiantes();
-        Estudiante est1=x.get(0);
-        ArrayList<Materia> z=est1.getMaterias();
-        for(int xx=0; xx<z.size(); xx++){
-            System.out.println(z.get(xx).getNombre());
-        }
 
 
 

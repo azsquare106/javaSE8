@@ -7,6 +7,16 @@ public class Universidad {
 
      private String nombreUniversidad;
      private ArrayList<Estudiante> estudiantes;
+     private ArrayList<Aula> aulas;
+
+
+    public ArrayList<Aula> getAulas() {
+        return aulas;
+    }
+
+    public void setAulas(ArrayList<Aula> aulas) {
+        this.aulas = aulas;
+    }
 
     public String getNombreUniversidad() {
         return nombreUniversidad;

@@ -1,9 +1,9 @@
 package com.dev.university;
 
-public class Materia {
+public class Aula {
 
     private String nombre;
-    private Profesor maestro;
+    private int identificador;
 
     public String getNombre() {
         return nombre;
@@ -13,11 +13,11 @@ public class Materia {
         this.nombre = nombre;
     }
 
-    public Profesor getMaestro() {
-        return maestro;
+    public int getIdentificador() {
+        return identificador;
     }
 
-    public void setMaestro(Profesor maestro) {
-        this.maestro = maestro;
+    public void setIdentificador(int identificador) {
+        this.identificador = identificador;
     }
 }
